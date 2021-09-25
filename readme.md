@@ -2,6 +2,8 @@
 
 This package can be used for a system of leader-followers. It extrapolates from the turtlebot3 package used for simulation in gazebo. Using this package, you can summon a number of turtlebots then select the sequence of how each are following each other.
 
+
+
 ## Usage
 
 After making the bash script executable on your machine using;
@@ -23,3 +25,7 @@ For example using the 8 turtlebots above
 ```
 4 5 6 7 8 1 3 2
 ```
+
+## Explanation
+
+From the shell script, all required python scripts will be loaded and executed so as to create the leader-follower system.
