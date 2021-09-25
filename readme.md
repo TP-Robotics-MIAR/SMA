@@ -3,7 +3,6 @@
 This package can be used for a system of leader-followers. It extrapolates from the turtlebot3 package used for simulation in gazebo. Using this package, you can summon a number of turtlebots then select the sequence of how each are following each other.
 
 
-
 ## Usage
 
 After making the bash script executable on your machine using;
@@ -28,4 +27,13 @@ For example using the 8 turtlebots above
 
 ## Explanation
 
-From the shell script, all required python scripts will be loaded and executed so as to create the leader-follower system.
+From the shell script, all required python scripts will be loaded and executed so as to create the leader-follower system. As seen above in the commands the follower-leader will follow a sequence, similar to the image describe below.
+
+![alt text](https://github.com/TP-Robotics-MIAR/SMA/blob/main/untitled.png)
+
+The system works as this;
+
+- The [broadcaster script](https://github.com/TP-Robotics-MIAR/SMA/blob/main/scripts/multipleBroadcaster.py) will take a list of two turtlebots;
+- From this list, their relative pose (linear and angular) will be computed so as to get a comparison of their situation in the environment;
+- Using this transform; their relative pose will be used to send a **cmd_vel** command to the follower turtlebot using;
+![equation](<img src="http://www.sciweavers.org/tex2img.php?eq=tan%5E%7B-1%7D%7B%5Cfrac%7BfollowerPose%7D%7BleaderPose%7D%7D&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0" align="center" border="0" alt="tan^{-1}{\frac{followerPose}{leaderPose}}" width="169" height="43" />)
