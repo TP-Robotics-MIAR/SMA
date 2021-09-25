@@ -36,4 +36,4 @@ The system works as this;
 - The [broadcaster script](https://github.com/TP-Robotics-MIAR/SMA/blob/main/scripts/multipleBroadcaster.py) will take a list of two turtlebots;
 - From this list, their relative pose (linear and angular) will be computed so as to get a comparison of their situation in the environment;
 - Using this transform; their relative pose will be used to send a **cmd_vel** command to the follower turtlebot using;
-![equation](<img src="http://www.sciweavers.org/tex2img.php?eq=tan%5E%7B-1%7D%7B%5Cfrac%7BfollowerPose%7D%7BleaderPose%7D%7D&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0" align="center" border="0" alt="tan^{-1}{\frac{followerPose}{leaderPose}}" width="169" height="43" />)
+![equation](http://www.sciweavers.org/download/Tex2Img_1632608553.jpg)
