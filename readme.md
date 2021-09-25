@@ -35,5 +35,8 @@ The system works as this;
 
 - The [broadcaster script](https://github.com/TP-Robotics-MIAR/SMA/blob/main/scripts/multipleBroadcaster.py) will take a list of two turtlebots;
 - From this list, their relative pose (linear and angular) will be computed so as to get a comparison of their situation in the environment;
-- Using this transform; their relative pose will be used to send a **cmd_vel** command to the follower turtlebot using;
+- Using this transform; their relative angular pose will be used to send a **cmd_vel** command to the follower turtlebot using;
 ![equation](http://www.sciweavers.org/download/Tex2Img_1632608553.jpg)
+-Similar for cartesian pose;
+![equation](http://www.sciweavers.org/download/Tex2Img_1632608737.jpg)
+-From this steps above iteratively every turtlebots will follow each other
